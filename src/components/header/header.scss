@@ -1,0 +1,65 @@
+@import "../../style/variable";
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: $header-height;
+    width: 100vw !important;
+    border-bottom: 1px solid $border-color !important;
+}
+
+header .logo__section {
+    min-width: $sidebar-width;
+    padding: 12px;
+}
+
+header .logo__section img {
+    height: 32px;
+}
+
+header .header__link-section {
+    padding: 12px 24px;
+    width: 100% !important;
+}
+
+header .header__link-section .header__right-part {
+    gap: 12px !important;
+}
+
+.date__dropdown {
+    padding: 8px 16px !important;
+    border-radius: $border-radius-sm !important;
+    background-color: $table-header-lg !important;
+    font-size: $font-size-sm !important;
+    line-height: $line-height-lg !important;
+    color: $font-color !important;
+
+    svg {
+        width: 16px !important;
+        height: 16px !important;
+        color: $font-light-color !important;
+    }
+}
+
+.dropdown__menu {
+    .btn {
+        padding: 8px 16px !important;
+        border-radius: $border-radius-sm !important;
+        background-color: $table-header-lg !important;
+        border: none !important;
+
+        span {
+            font-size: $font-size-sm !important;
+            line-height: $line-height-lg !important;
+            color: $font-color !important;
+        }
+    }
+
+    svg {
+        width: 16px !important;
+        height: 16px !important;
+        color: $font-light-color !important;
+    }
+}

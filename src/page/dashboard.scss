@@ -1,0 +1,24 @@
+@import "../style/variable";
+
+main {
+    position: relative !important;
+    width: 100% !important;
+    top: $header-height !important;
+    padding: 12px 0px !important;
+    max-height: calc(100vh - $header-height) !important;
+    overflow-y: auto !important;
+
+    .main__head-section {
+        padding: 12px 24px 12px !important;
+
+        .main__heading {
+            font-size: $font-size-lg !important;
+            font-weight: $font-weight-bold !important;
+            line-height: $line-height-lg !important;
+        }
+    }
+
+    .card__section {
+        padding: 12px 24px !important;
+    }
+}

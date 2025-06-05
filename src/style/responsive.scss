@@ -1,0 +1,138 @@
+@media screen and (min-width: 1920px) {
+
+    body,
+    header,
+    html,
+    section {
+        margin: 0 auto;
+        max-width: 1920px;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .EZDrawer .EZDrawer__container,
+    main {
+        top: 0px !important;
+    }
+}
+
+
+@media screen and (max-width: 991.98px) {
+    header {
+        .logo__section {
+            width: min-content !important;
+            min-width: min-content !important;
+        }
+    }
+
+    main {
+        .main__head-section {
+            padding: 12px 12px 6px !important;
+            gap: 12px !important;
+        }
+
+        .card__section {
+            padding: 6px 12px !important;
+        }
+
+        .widget,
+        .double__widgets-section .col-lg-6:first-child .widget,
+        .double__widgets-section .col-lg-6:last-child .widget {
+            padding: 6px 12px !important;
+        }
+
+        .widget .widget-body {
+            padding: .5rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    header {
+        .header__link-section {
+            padding: 12px !important;
+        }
+
+        .text__link,
+        hr,
+        .date__dropdown,
+        .dropdown__menu {
+            display: none !important;
+        }
+
+        .header__link-section .header__right-part {
+            gap: 0px !important;
+        }
+    }
+
+    .EZDrawer {
+        .EZDrawer__container {
+            position: absolute !important;
+            width: 10px !important;
+            padding: 4px !important;
+        }
+
+        .EZDrawer__checkbox:checked~.EZDrawer__container {
+            width: 250px !important;
+        }
+
+        .EZDrawer__container .sidebar__user-panel {
+            display: none !important;
+        }
+
+        .EZDrawer__checkbox:checked~.EZDrawer__container .sidebar__user-panel {
+            display: flex !important;
+        }
+    }
+
+    main {
+        margin-left: 10px !important;
+
+        .widget-controls {
+            width: 100% !important;
+        }
+
+        .widget .widget-container .widget-controls .linkicon-btn svg,
+        .widget .widget-container .widget-controls .bsDots-btn svg {
+            width: 1.8rem !important;
+            height: 1.8rem !important;
+        }
+
+        .radio-options {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+
+            .radio-item {
+                padding: 0px !important;
+
+                input[type="radio"] {
+                    min-width: 15px !important;
+                    height: 15px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    body,
+    header,
+    html,
+    section {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    header {
+        position: relative;
+    }
+
+    .EZDrawer .EZDrawer__container,
+    main {
+        top: 0px !important;
+    }
+}

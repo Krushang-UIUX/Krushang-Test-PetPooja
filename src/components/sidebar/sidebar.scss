@@ -1,0 +1,142 @@
+// Drawer Default style
+@import 'react-modern-drawer/dist/index.css';
+@import "../../style/variable";
+
+.EZDrawer nav {
+    position: relative !important;
+    top: $header-height !important;
+    box-shadow: none !important;
+    border-right: 1px solid $border-color !important;
+    padding: 12px !important;
+    height: calc(100vh - $header-height) !important;
+    transform: none !important;
+}
+
+.EZDrawer .EZDrawer__container {
+    visibility: visible !important;
+}
+
+.EZDrawer label {
+    display: none !important;
+}
+
+.sidebar__links {
+    padding: 0px !important;
+    max-height: calc(100vh - 180px) !important;
+    overflow-y: auto !important;
+
+     &::-webkit-scrollbar {
+        display: none !important;
+    }
+}
+
+.sidebar__links li {
+    margin-top: 4px !important;
+
+    &:first-child {
+        margin-top: 0px !important;
+    }
+}
+
+.sidebar__links li .text__link svg {
+    color: $font-light-color !important;
+}
+
+.sidebar__links li .text__link {
+    padding: 12px !important;
+    gap: 8px !important;
+    border-radius: $border-radius-sm !important;
+    color: $font-color !important;
+
+    &:hover {
+        background-color: $light-bg !important;
+        color: $font-color !important;
+        svg {
+            color: $font-color !important;
+        }
+    }
+
+    &.active {
+        background-color: $success-light-color !important;
+        color: $success-color !important;
+        svg {
+            color: $success-color !important;
+        }
+    }
+}
+
+
+.sidebar__user-panel {
+    border-radius: $border-radius-xl !important;
+    position: fixed !important;
+    bottom: 12px !important;
+
+    circle {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 50% !important;
+        background-color: $success-color !important;
+        font-size: $font-size-base !important;
+        color: $white-color !important;
+        font-weight: $font-weight-normal !important;
+        line-height: $line-height-base !important;
+    }
+
+    .user-profile {
+        p {
+            font-size: $font-size-base !important;
+            color: $font-color !important;
+            font-weight: $font-weight-light !important;
+            line-height: $line-height-lg !important;
+        }
+
+        small {
+            font-size: $font-size-sm !important;
+            color: $font-light-color !important;
+            font-weight: $font-weight-light !important;
+            line-height: $line-height-base !important;
+        }
+    }
+}
+
+.close-icon {
+    position: absolute !important;
+    z-index: 99 !important;
+    right: -10px !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    background-color: $table-header-lg !important;
+}
+
+.close-icon svg path {
+    fill: $font-color !important;
+}
+
+.EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__container .sidebar__links li .text__link span,
+.EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__container .sidebar__user-panel .user-profile {
+    display: flex !important;
+}
+
+.EZDrawer .EZDrawer__container .sidebar__links li .text__link span,
+.EZDrawer .EZDrawer__container .sidebar__user-panel .user-profile {
+    display: none !important;
+}
+
+.EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__container .sidebar__user-panel {
+    width: calc(100% - 24px) !important;
+    background-color: $light-bg !important;
+}
+
+.EZDrawer .EZDrawer__container .sidebar__user-panel {
+    width: 50px !important;
+    background-color: none !important;
+}
+
+.EZDrawer .EZDrawer__checkbox:checked ~ .EZDrawer__container .close-icon {
+    rotate: 0deg !important;
+}
+
+.EZDrawer .EZDrawer__container .close-icon {
+    rotate: 180deg !important;
+}

@@ -1,0 +1,77 @@
+@import '../../style/variable';
+
+.widget {
+    padding: 12px 24px !important;
+
+    .widget-container {
+        border: 1px solid $border-color !important;
+        border-radius: $border-radius-lg !important;
+
+        .widget-header {
+            padding: 12px !important;
+
+            &.pb-0 {
+                padding-bottom: 0px !important;
+            }
+
+            h3 {
+                margin: 0px !important;
+                font-size: $font-size-base !important;
+                line-height: $line-height-base !important;
+                font-weight: $font-weight-bold !important;
+            }
+
+            .table-count { 
+                width: 20px !important;
+                height: 20px !important;
+                border-radius: 50% !important;
+                background-color: $light-bg !important;
+                font-size: $font-size-sm !important;
+                line-height: $line-height-base !important;
+            }
+        }
+
+        .widget-controls {
+            gap: 12px !important;
+
+            .linkicon-btn,
+            .bsDots-btn {
+                box-shadow: none !important;
+                border: none !important;
+                background: none !important;
+
+                svg {
+                    width: 32px !important;
+                    height: 32px !important;
+                    padding: 6px !important;
+                    color: $font-light-color !important;
+                }
+            }
+        }
+    }
+
+    .widget-body {
+        padding: 1rem !important;
+        height: 241px !important;
+        overflow-y: auto !important;
+    }
+}
+
+.h-212px .widget .widget-container .widget-body {
+    height: 212px !important;
+}
+
+.double__widgets-section {
+    .col-lg-6:first-child .widget {
+        padding: 12px 12px 12px 24px !important;
+    }
+
+    .col-lg-6:last-child .widget {
+        padding: 12px 24px 12px 12px !important;
+    }
+}
+
+.employee__widget-section .widget .widget-body,
+.overdue__widget-section .widget .widget-body {
+    padding: 0px !important;
+}

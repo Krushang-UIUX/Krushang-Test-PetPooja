@@ -1,0 +1,70 @@
+// Font Family
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+$primary-color: #008745;      
+$primary-light-color: #EBF7ED;
+$font-color: #212121;
+$font-light-color: #979797;
+$light-bg: #F7F8FA;
+$dark-color: #212529;
+$table-header-lg: #F2F4F6;
+$border-color: #EBEBEB;
+
+$success-color: #039855;
+$success-light-color: #ECFDF3;
+$danger-color: #D92D20;
+$danger-light-color: #FFF0E5;
+$warning-color: #D9A541;
+$warning-light-color: #FFF8E5;
+$purple-color: #7955A3;
+$purple-light-color: #F7EDFF;
+$orange-color: #FF6D00;
+$orange-light-color: #FFF0E5;
+$white-color: #ffffff;
+$black-color: #000000;
+$white-light-color: #EFEFEF;
+
+// SPACING SCALE 
+$spacer: 1.4rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3
+);
+
+// TYPOGRAPHY
+$font-family-sans-serif: 'Inter', sans-serif;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-sm: 0.75rem;
+$font-size-base: 0.875rem;
+$font-size-lg: 1.125rem;
+
+$font-weight-light: 400;
+$font-weight-normal: 500;
+$font-weight-bold: 600;
+
+$line-height-sm: 18px;
+$line-height-base: 20px;
+$line-height-lg: 22px;
+$text-heading-color: $font-color;
+
+// BORDER RADIUS 
+$border-radius-sm: 0.5rem;
+$border-radius: 0.75rem;
+$border-radius-lg: .875rem;
+$border-radius-xl: 1rem;
+
+// Header height
+$header-height: 56px;
+$sidebar-width: 250px;
+
+// BREAKPOINTS
+$breakpoint-sm: 575.98px;
+$breakpoint-md: 767.98px;
+$breakpoint-lg: 991.98px;
+$breakpoint-xl: 1199.98px;
+$breakpoint-xxl: 1399.98px;

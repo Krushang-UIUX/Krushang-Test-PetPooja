@@ -1,0 +1,508 @@
+@import './variable';
+
+*,
+html,
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-family-base !important;
+    font-size: $font-size-base !important;
+    color: $font-color !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+hr,
+hr.horizontal {
+    border: 1px solid $border-color !important;
+}
+
+hr {
+    width: 1px !important;
+    height: 100% !important;
+}
+
+hr.horizontal {
+    width: 100% !important;
+    height: 1px !important;
+
+    &.position-absolute {
+        bottom: 0 !important;
+        left: 0 !important;
+    }
+}
+
+ul,
+ul li {
+    list-style: none !important;
+}
+
+body,
+div,
+ul,
+main {
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-track {
+        width: 8px !important;
+        height: 6px !important;
+        border-radius: $border-radius-lg !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $border-color !important;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $white-color !important;
+    }
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.text__link {
+    color: $font-light-color !important;
+
+    &:hover,
+    &.active {
+        color: $font-color !important;
+    }
+
+    svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    span {
+        font-family: $font-family-base !important;
+        font-size: $font-size-sm !important;
+        line-height: $line-height-base !important;
+        font-weight: $font-weight-normal !important;
+        text-align: center !important;
+    }
+
+    .icon-32 {
+        width: 32px !important;
+        height: 32px !important;
+        padding: 6px !important;
+    }
+}
+
+.btn {
+    width: auto !important;
+    border-radius: $border-radius-sm !important;
+    gap: 10px !important;
+
+    font: {
+        size: $font-size-base !important;
+        weight: $font-weight-normal !important;
+    }
+
+    line-height: $line-height-base !important;
+
+    svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    &.btn-primary {
+        color: $white-color !important;
+        background-color: $primary-color !important;
+        border: 1px solid $primary-color !important;
+
+        &:hover {
+            background-color: $success-light-color !important;
+            color: $primary-color !important;
+        }
+
+        &:active,
+        &:focus {
+            background-color: $success-light-color !important;
+            color: $white-color !important;
+        }
+    }
+
+    &.btn-secondary {
+        color: $font-color !important;
+        background-color: $white-color !important;
+        border: 1px solid $border-color !important;
+
+        &:hover,
+        &:active,
+        &:focus {
+            background-color: $white-light-color !important;
+        }
+    }
+}
+
+main {
+    .card__section {
+        .card {
+            border: 1px solid $border-color !important;
+            border-radius: $border-radius-lg !important;
+
+            .card-header,
+            .card-title,
+            .card-body {
+                padding: 0px !important;
+                background-color: $white-color !important;
+                border: none !important;
+                margin: 0px !important;
+            }
+
+            .card-header {
+                svg {
+                    width: 20px !important;
+                    height: 20px !important;
+                    color: $font-light-color !important;
+                }
+
+                .card-title {
+                    align-items: center !important;
+                    gap: 12px !important;
+
+                    h2 {
+                        margin: 0px !important;
+                        font-size: $font-size-base !important;
+                        line-height: $line-height-base !important;
+                        font-weight: $font-weight-bold !important;
+                    }
+                }
+            }
+
+            .card-body {
+                margin-top: 12px !important;
+                font-size: $font-size-sm !important;
+                line-height: $line-height-lg !important;
+                font-weight: $font-weight-normal !important;
+
+                span {
+                    color: $font-light-color !important;
+                }
+
+                .status-item {
+                    display: flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+
+                    .count {
+                        width: 20px !important;
+                        height: 20px !important;
+                        border-radius: 50% !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .icon-bg {
+        background-color: $light-bg !important;
+        width: 36px !important;
+        height: 36px !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: $border-radius-sm !important;
+    }
+
+    .nav-tabs {
+        padding: 0px 12px !important;
+        border-bottom: 1px solid $border-color !important;
+
+        .tab {
+            padding-bottom: 8px !important;
+            cursor: pointer;
+            font-size: $font-size-base !important;
+            line-height: $line-height-base !important;
+            font-weight: $font-weight-normal !important;
+            color: $font-color !important;
+
+            .count {
+                width: 20px !important;
+                height: 20px !important;
+                border-radius: 50% !important;
+                background-color: $light-bg !important;
+                font-size: $font-size-sm !important;
+                line-height: $line-height-base !important;
+            }
+
+            &.active {
+                color: $primary-color !important;
+                border-bottom: 1px solid $primary-color !important;
+
+                .count {
+                    background: $success-light-color !important;
+                    color: $primary-color !important;
+                }
+            }
+        }
+    }
+
+    .recharts-legend-wrapper {
+        position: relative !important;
+    }
+
+    // React Data table
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid $light-bg;
+            font-size: $font-size-sm !important;
+            line-height: $line-height-base !important;
+            color: $font-color !important;
+            font-weight: $font-weight-light !important;
+            text-wrap: nowrap !important;
+
+            .status-column {
+                background-color: $orange-light-color !important;
+                color: $orange-color !important;
+                border: 1px solid $orange-color !important;
+                height: 22px !important;
+                padding: 0px 6px !important;
+                border-radius: 4px !important;
+            }
+
+            .btn.btn-secondary {
+                padding: 0px !important;
+                background-color: $table-header-lg !important;
+                width: 20px !important;
+                height: 20px !important;
+
+                svg {
+                    width: 12px !important;
+                    height: 13.33px !important;
+                    color: $font-color !important;
+                }
+            }
+        }
+
+        thead th {
+            position: sticky;
+            top: 0;
+            background-color: $light-bg;
+            z-index: 2;
+            font-weight: $font-weight-normal !important;
+        }
+    }
+
+    .pagination {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px;
+    }
+
+    // TaskCard
+
+    .task-card {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        padding: 12px !important;
+        background-color: $light-bg !important;
+        border-radius: $border-radius-sm !important;
+        border: 1px solid transparent !important;
+
+        &:hover {
+            border: 1px solid $border-color !important;
+            box-shadow:
+                0px 6px 10px -2px #0000000F,
+                0px 4px 6px -1px #0000001A;
+        }
+
+        .card-header {
+
+            .id__section,
+            .comment__section {
+                gap: 2px !important;
+
+                svg {
+                    color: $danger-color !important;
+                    width: 16px !important;
+                    height: 16px !important;
+                }
+
+                span {
+                    font-size: $font-size-sm !important;
+                    line-height: $line-height-base !important;
+                    color: $font-light-color !important;
+                    font-weight: $font-weight-light !important;
+                }
+            }
+
+            h2 {
+                font-size: $font-size-sm !important;
+                line-height: $line-height-base !important;
+                color: $font-color !important;
+                font-weight: $font-weight-normal !important;
+            }
+
+            .comment__section {
+                svg {
+                    color: $font-light-color !important;
+                }
+            }
+        }
+
+        .card-body {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+
+            .date__time-section {
+                gap: 12px !important;
+
+                div {
+                    gap: 2px !important;
+
+                    svg {
+                        color: $font-light-color !important;
+                        width: 16px !important;
+                        height: 16px !important;
+                    }
+
+                    span {
+                        font-size: $font-size-sm !important;
+                        line-height: $line-height-base !important;
+                        color: $font-light-color !important;
+                        font-weight: $font-weight-normal !important;
+                    }
+                }
+            }
+
+            .task-type {
+                background-color: $white-color !important;
+                color: $font-color !important;
+                font-size: $font-size-sm !important;
+                line-height: $line-height-base !important;
+                padding: 0px 6px !important;
+            }
+
+            .flow__task svg {
+                width: 18px !important;
+                height: 18px !important;
+                padding: 0px 1px !important;
+                border-radius: $border-radius-sm !important;
+                background-color: $white-color !important;
+                color: $font-color !important;
+            }
+        }
+    }
+
+    // Workflow card 
+    .workflow_card {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        padding: 12px !important;
+        background-color: $light-bg !important;
+        border-radius: $border-radius-sm !important;
+        border: 1px solid transparent !important;
+
+        h2 {
+            font-size: $font-size-sm !important;
+            line-height: $line-height-base !important;
+            color: $font-color !important;
+            font-weight: $font-weight-normal !important;
+        }
+
+        .status__item {
+            gap: 4px;
+
+            span {
+                font-size: $font-size-sm !important;
+                line-height: $line-height-base !important;
+                color: $font-light-color !important;
+                font-weight: $font-weight-normal !important;
+            }
+
+            .status-number {
+                background-color: $white-color !important;
+                color: $font-color !important;
+                font-size: $font-size-sm !important;
+                line-height: $line-height-base !important;
+                width: 22px !important;
+                height: 22px !important;
+                border-radius: 50% !important;
+            }
+        }
+    }
+
+    .radio-options {
+        .radio-item {
+            padding: 12px !important;
+            gap: 12px !important;
+            color: #646464 !important;
+            font-size: $font-size-sm !important;
+            line-height: $line-height-base !important;
+
+            input[type="radio"] {
+                border-color: $font-color !important;
+                min-width: 24px !important;
+                height: 24px !important;
+            }
+
+            .radio-title {
+                font-weight: $font-weight-bold !important;
+                color: $font-color !important;
+            }
+
+        }
+    }
+}
+
+span,
+.count {
+  &.warning-color {
+    background-color: $warning-light-color !important;
+    color: $warning-color !important;
+  }
+
+  &.danger-color {
+    background-color: $danger-light-color !important;
+    color: $danger-color !important;
+  }
+
+  &.success-color {
+    background-color: $success-light-color !important;
+    color: $success-color !important;
+  }
+
+  &.purple-color {
+    background-color: $purple-light-color !important;
+    color: $purple-color !important;
+  }
+}
+
+.border-1 {
+  border-radius: $border-radius-sm !important;
+  padding: 2px 4px !important;
+  font-size: $font-size-sm !important;
+
+  &.warning-color {
+    border: 1px solid $warning-color !important;
+  }
+  &.danger-color {
+    border: 1px solid $danger-color !important;
+  }
+  &.success-color {
+    border: 1px solid $success-color !important;
+  }
+  &.purple-color {
+    border: 1px solid $purple-color !important;
+  }
+}
