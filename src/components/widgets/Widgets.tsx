@@ -68,7 +68,7 @@ const Widgets: React.FC<WidgetProps> = ({
                   </button>
 
                   {isDropdownOpen && (
-                    <ul className="position-absolute w-full bg-white ps-0 mb-0 w-100 shadow-sm mt-1 rounded-3">
+                    <ul className="position-absolute w-full bg-white ps-0 mb-0 w-100 shadow-sm mt-1 rounded-3 z-999">
                       {employees.map((employee, idx) => (
                         <li
                           key={idx}

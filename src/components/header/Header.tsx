@@ -30,7 +30,7 @@ const Header = () => {
   const DownArrow = IoChevronDown as unknown as React.FC;
     
   return (
-    <header className='d-flex align-items-center' role="banner">
+    <header className='d-flex align-items-center z-999' role="banner">
       <section className='logo__section'>
         <img src={LogoImg} alt="Your Brand Logo" />
       </section>
@@ -58,7 +58,7 @@ const Header = () => {
               </button>
 
               {isDropdownOpen && (
-                <ul className="position-absolute w-full bg-white ps-0 mb-0 w-100 shadow-sm mt-1 rounded-3">
+                <ul className="position-absolute w-full bg-white ps-0 mb-0 w-100 shadow-sm mt-1 rounded-3 z-999">
                   {outlets.map((outlet, idx) => (
                     <li
                       key={idx}
