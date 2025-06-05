@@ -1,7 +1,7 @@
 # 📊 Figma to React Dashboard Conversion
 
 ## 🚀 Live Preview
-🔗 [Live Demo](https://your-vercel-or-netlify-link.com)
+🔗 [Live Demo](https://krushang-petpoojatask.netlify.app/)
 
 ## 📁 Project Overview
 This project is a **Practical Assessment**, fully responsive React dashboard built from a Figma design using **React.js** and **SASS** for styling. The goal was to closely translate the design into a modular, maintainable, and scalable React component architecture.
