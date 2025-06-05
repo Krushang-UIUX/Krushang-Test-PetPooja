@@ -31,3 +31,9 @@ npm install recharts
 
 #▶️ Running the Project
 npm start
+
+#Ai Tools
+Copilot
+
+#Live server
+Netlify
